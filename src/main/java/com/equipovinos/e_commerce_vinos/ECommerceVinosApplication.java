@@ -8,6 +8,7 @@ public class ECommerceVinosApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ECommerceVinosApplication.class, args);
+		System.out.println("Hola mundo!");
 	}
 
 }
