@@ -2,6 +2,8 @@
 package com.equipovinos.e_commerce_vinos.entity;
 
 import java.io.Serializable;
+import java.util.List;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -23,12 +25,12 @@ public class Articulo implements Serializable {
     
     //Relaciones
     @OneToMany
-    private Categoria idCategoria;
+    private List<Categoria> idCategoria;
 
     public Articulo() {
     }
 
-    public Articulo(int id, String nombre, int precio, String descripcion, String imagenes, Boolean disponible, int stock, Categoria idCategoria) {
+    public Articulo(int id, String nombre, int precio, String descripcion, String imagenes, Boolean disponible, int stock, List<Categoria> idCategoria) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -95,11 +97,11 @@ public class Articulo implements Serializable {
         this.stock = stock;
     }
 
-    public Categoria getIdCategoria() {
+    public List<Categoria> getIdCategoria() {
         return idCategoria;
     }
 
-    public void setIdCategoria(Categoria idCategoria) {
+    public void setIdCategoria(List<Categoria> idCategoria) {
         this.idCategoria = idCategoria;
     }
     
