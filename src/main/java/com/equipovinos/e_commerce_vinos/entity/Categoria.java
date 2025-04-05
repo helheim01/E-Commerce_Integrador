@@ -2,8 +2,19 @@
 package com.equipovinos.e_commerce_vinos.entity;
 
 import java.io.Serializable;
-import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Categoria implements Serializable {
     
@@ -14,36 +25,8 @@ public class Categoria implements Serializable {
     private String nombre;
     private String descripcion;
 
-    public Categoria() {
-    }
+    //Relaciones
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Articulo> articulos = new ArrayList<>();
 
-    public Categoria(String nombre, String descripcion) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-    
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-    
 }
