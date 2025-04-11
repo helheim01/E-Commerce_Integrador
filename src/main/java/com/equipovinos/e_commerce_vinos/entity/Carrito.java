@@ -24,19 +24,9 @@ public class Carrito implements Serializable {
     private Date fecha;
 
     //Relaciones
-
-
-    @OneToOne(mappedBy = "idCarrito") //Hace referencia al private Carrito idCarrito; del detallecarrito
-    private DetalleCarrito detalleCarrito;
-
-
-    @OneToOne
-    @JoinColumn(name = "id_usuario")
+    @OneToOne//(cascade = CascadeType.ALL)    //CORREGIDO
+    @JoinColumn(name = "usuario_id")
     private Usuario usuario;
-
-
-    @OneToOne(mappedBy = "carrito") // hace referencia a 'private Carrito carrito;' en Venta
-    private Venta venta;
 
 
 }

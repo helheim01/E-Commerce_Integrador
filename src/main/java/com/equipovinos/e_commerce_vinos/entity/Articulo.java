@@ -23,18 +23,4 @@ public class Articulo implements Serializable {
     private Boolean disponible;
     private int stock;
 
-
-    //Relaciones
-    @ManyToOne
-    @JoinColumn(name = "id_categoria") // FK en la tabla articulo
-    private Categoria categoria;
-
-
-
-
-    @ManyToOne
-    @JoinColumn(name = "id_detalle_carrito") // FK en la tabla Articulo
-    private DetalleCarrito detalleCarrito;
-
-
 }

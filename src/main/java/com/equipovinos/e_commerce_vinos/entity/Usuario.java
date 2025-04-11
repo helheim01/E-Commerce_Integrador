@@ -31,17 +31,11 @@ public class Usuario implements Serializable {
     private TipoUsuario tipoUsuario;
 
 
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Domicilio> domicilios = new ArrayList<>();
-
-
     //Relaciones
-    @OneToOne(mappedBy = "usuario") //Hace referencia al private Usuario usuario del Carrito
-    private Carrito carrito;
 
-
-    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
-    private Venta venta;
+    @OneToMany(cascade = CascadeType.ALL)  //CORREGIDO
+    @JoinColumn(name = "usuario_id")
+    private List<Domicilio> domicilios = new ArrayList<>();
 
 
     public void addDomicilios(Domicilio domicilio) {

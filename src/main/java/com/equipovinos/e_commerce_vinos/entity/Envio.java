@@ -14,32 +14,20 @@ import lombok.Setter;
 @Entity
 public class Envio implements Serializable {
 
-
     @Id
     private int id;
-
-
     @Enumerated(EnumType.STRING)
     private EstadoEnvio estado;
-
 
     @Temporal(TemporalType.DATE)
     private Date fecha;
     @Temporal(TemporalType.DATE)
     private Date entregaEstimada;
 
-
     //Relaciones
 
-
-    @OneToOne
-    @JoinColumn(name = "id_domicilio") // FK en la tabla Envio
+    @OneToOne//(cascade = CascadeType.ALL) //CORREGIDO
+    @JoinColumn(name = "domicilio_id")
     private Domicilio domicilio;
-
-
-    @OneToOne(mappedBy = "envio")
-    private Venta venta;
-
-
 }
 

@@ -24,13 +24,5 @@ public class Domicilio implements Serializable {
     private int codPostal;
     private String pais;
 
-    //Relaciones
-    @ManyToOne
-    @JoinColumn(name = "id_usuario") // FK en la tabla domicilio
-    private Usuario usuario;
-
-
-    @OneToOne(mappedBy = "domicilio") // hace referencia al atributo "domicilio" en Envio
-    private Envio envio;
 }
 

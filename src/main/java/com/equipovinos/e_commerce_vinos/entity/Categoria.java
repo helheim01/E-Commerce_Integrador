@@ -24,9 +24,13 @@ public class Categoria implements Serializable {
 
 
     //Relaciones
-    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = true)
+
+    @OneToMany(cascade = CascadeType.ALL)  //CORREGIDO
+    @JoinColumn(name = "categoria_id")
     private List<Articulo> articulos = new ArrayList<>();
 
-
+    public void addArticulo(Articulo articulo) {
+        this.articulos.add(articulo);
+    }
 }
 

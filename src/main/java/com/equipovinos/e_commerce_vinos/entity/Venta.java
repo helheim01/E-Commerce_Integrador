@@ -28,19 +28,16 @@ public class Venta implements Serializable {
     @Enumerated(EnumType.STRING)
     private MedioPago medioPago;
 
-
-    @OneToOne
-    @JoinColumn(name = "id_usuario") // FK en la tabla Venta
+    @OneToOne//(cascade = CascadeType.ALL) //CORREGIDO
+    @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
-
-    @OneToOne
-    @JoinColumn(name = "id_carrito") // FK en la tabla Venta
+    @OneToOne//(cascade = CascadeType.ALL) //CORREGIDO
+    @JoinColumn(name = "carrito_id")
     private Carrito carrito;
 
-
-    @OneToOne
-    @JoinColumn(name = "id_envio") // FK en la tabla Venta
+    @OneToOne//(cascade = CascadeType.ALL) //CORREGIDO
+    @JoinColumn(name = "envio_id")
     private Envio envio;
 
 

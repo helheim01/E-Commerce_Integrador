@@ -25,21 +25,18 @@ public class DetalleCarrito implements Serializable {
 
     //Relaciones
 
+    @OneToOne(cascade = CascadeType.ALL)    //CORREGIDO
+    @JoinColumn(name = "carrito_id")
+    private Carrito carrito;
 
-    @OneToOne
-    @JoinColumn(name = "id_carrito")
-    private Carrito idCarrito;
 
-
-    @OneToMany(mappedBy = "detalleCarrito", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL)  //CORREGIDO
+    @JoinColumn(name = "detalleCarrito_id")
     private List<Articulo> articulos = new ArrayList<>();
-
 
     public void addArticulo(Articulo articulo) {
         this.articulos.add(articulo);
-        articulo.setDetalleCarrito(this);
     }
-
 
 }
 
