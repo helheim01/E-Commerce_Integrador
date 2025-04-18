@@ -14,11 +14,6 @@ public class DomicilioController {
     @Autowired
     private RepositoryDomicilio repositoryDomicilio;
 
-    @GetMapping()
-    public String index() {
-        return "Conectado";
-    }
-
     // Obtener un Domicilio por ID
     @GetMapping("/domicilio/{id}")
     public Domicilio traerDomicilioPorId(@PathVariable int id) {

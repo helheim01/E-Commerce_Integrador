@@ -14,11 +14,6 @@ public class EnvioController {
     @Autowired
     private RepositoryEnvio repositoryEnvio;
 
-    @GetMapping()
-    public String index() {
-        return "Conectado";
-    }
-
     // Obtener un Envio por ID
     @GetMapping("/envio/{id}")
     public Envio traerEnvioPorId(@PathVariable int id) {

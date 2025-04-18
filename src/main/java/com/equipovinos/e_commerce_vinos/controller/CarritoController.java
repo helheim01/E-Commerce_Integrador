@@ -1,5 +1,6 @@
 package com.equipovinos.e_commerce_vinos.controller;
 
+import com.equipovinos.e_commerce_vinos.entity.Articulo;
 import com.equipovinos.e_commerce_vinos.entity.Carrito;
 import com.equipovinos.e_commerce_vinos.repository.RepositoryCarrito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,51 +20,43 @@ public class CarritoController {
         return "Conectado";
     }
 
-    // Obtener un Carrito por ID
-    @GetMapping("/carrito/{id}")
-    public Carrito traerCarritoPorId(@PathVariable int id) {
-        Optional<Carrito> carrito = repositoryCarrito.findById(id);
-        return carrito.orElse(null);
+    // Obtener Carrito por ID
+    @GetMapping("carrito")
+    public Carrito getCarrito(@PathVariable Integer id) {
+        return repositoryCarrito.findById(id).get();
     }
 
-    // Traer lista de carritos
-    @GetMapping("/carritos")
-    public List<Carrito> traerListaCarritos() {
+    // Obtener todos los Carritos
+    @GetMapping("carritos")
+    public List<Carrito> getCarritos() {
         return repositoryCarrito.findAll();
     }
 
-    // Crear
-    @PostMapping("/carrito/crear")
-    public String crearCarrito(@RequestBody Carrito carrito) {
+    // Guardar Carrito
+    @PostMapping("guardarCarrito")
+    public String post(@RequestBody Carrito carrito) {
         repositoryCarrito.save(carrito);
-        return "Carrito Creado Correctamente";
+        return "CARRITO GUARDADO";
     }
 
-    // Editar
-    @PutMapping("/carrito/editar/{id}")
-    public String editarCarrito(@PathVariable int id, @RequestBody Carrito carrito) {
-        Carrito actualizarCarrito = repositoryCarrito.findById(id).orElse(null);
-        if (actualizarCarrito != null) {
-            actualizarCarrito.setEstado(carrito.getEstado());
-            actualizarCarrito.setFecha(carrito.getFecha());
-            actualizarCarrito.setUsuario(carrito.getUsuario());
-            repositoryCarrito.save(actualizarCarrito);
-            return "Carrito Editado Correctamente";
-        } else {
-            return "Carrito no encontrado";
-        }
+    // Editar Carrito
+    @PutMapping("editarCarrito/{id}")
+    public String uptdate(@PathVariable Integer id, @RequestBody Carrito carrito) {
+        Carrito uptdateCarrito = repositoryCarrito.findById(id).get();
+        uptdateCarrito.setEstado(carrito.getEstado());
+        uptdateCarrito.setUsuario(carrito.getUsuario());
+        uptdateCarrito.setFecha(carrito.getFecha());
+
+        return "CARRITO EDITADO CORRECTAMENTE";
     }
 
-    // Eliminar
-    @DeleteMapping("/carrito/delete/{id}")
-    public String eliminarCarrito(@PathVariable int id) {
-        Carrito carritoAEliminar = repositoryCarrito.findById(id).orElse(null);
-        if (carritoAEliminar != null) {
-            repositoryCarrito.delete(carritoAEliminar);
-            return "Carrito Eliminado Correctamente";
-        } else {
-            return "Carrito no encontrado";
-        }
+    // Eliminar Carrito
+    @DeleteMapping("deleteCarrito/{id}")
+    public String delete(@PathVariable Integer id) {
+        Carrito deleteCarrito = repositoryCarrito.findById(id).get();
+        repositoryCarrito.delete(deleteCarrito);
+
+        return "CARRITO ELIMINADO";
     }
 
 }

@@ -14,11 +14,6 @@ public class VentaController {
     @Autowired
     private RepositoryVenta repositoryVenta;
 
-    @GetMapping()
-    public String index() {
-        return "Conectado";
-    }
-
     // Obtener una Venta por ID
     @GetMapping("/venta/{id}")
     public Venta traerVentaPorId(@PathVariable int id) {

@@ -14,11 +14,6 @@ public class DetalleCarritoController {
     @Autowired
     private RepositoryDetalleCarrito repositoryDetalleCarrito;
 
-    @GetMapping()
-    public String index() {
-        return "Conectado";
-    }
-
     // Obtener un DetalleCarrito por ID
     @GetMapping("/detallecarrito/{id}")
     public DetalleCarrito traerDetallePorId(@PathVariable int id) {

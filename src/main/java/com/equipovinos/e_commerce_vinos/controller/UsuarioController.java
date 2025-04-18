@@ -14,11 +14,6 @@ public class UsuarioController {
     @Autowired
     private RepositoryUsuario repositoryUsuario;
 
-    @GetMapping()
-    public String index() {
-        return "Conectado";
-    }
-
     // Obtener un Usuario por ID
     @GetMapping("/usuario/{id}")
     public Usuario traerUsuarioPorId(@PathVariable int id) {

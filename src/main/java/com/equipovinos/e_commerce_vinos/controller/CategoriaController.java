@@ -14,11 +14,6 @@ public class CategoriaController {
     @Autowired
     private RepositoryCategoria repositoryCategoria;
 
-    @GetMapping()
-    public String index() {
-        return "Conectado";
-    }
-
     // Obtener una Categoria por ID
     @GetMapping("/categoria/{id}")
     public Categoria traerCategoriaPorId(@PathVariable int id) {

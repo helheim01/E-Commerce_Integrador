@@ -15,54 +15,47 @@ public class ArticuloController {
     @Autowired
     private RepositoryArticulo repositoryArticulo;
 
-
-    @GetMapping()
-    public String index(){
-        return "Conectado";
+    // Obtener Articulo por ID
+    @GetMapping("articulo")
+    public Articulo getArticulo(@PathVariable Integer id) {
+        return repositoryArticulo.findById(id).get();
     }
 
-    // Obtener un Articulo por ID
-    @GetMapping("/{id}")
-    public Articulo traerArticuloPorId(@PathVariable int id) {
-        Optional<Articulo> articulo = repositoryArticulo.findById(id);
-        return articulo.orElse(null);
-    }
-
-    //Traer lista
+    // Obtener todos los Articulos
     @GetMapping("articulos")
-    public List<Articulo> traerListaArticulos(){
+    public List<Articulo> getArticulos() {
         return repositoryArticulo.findAll();
     }
 
-    //Crear
-    @PostMapping("crear")
-    public String crearArticulo (@RequestBody Articulo articulo){
-            repositoryArticulo.save(articulo);
-            return "Articulo Creado Correctamente";
+    // Guardar Articulo
+    @PostMapping("guardarArticulo")
+    public String post(@RequestBody Articulo articulo) {
+        repositoryArticulo.save(articulo);
+        return "ARTICULO GUARDADO";
     }
 
-    @PutMapping("editar/{id}")
-    public String editarArticulo(@PathVariable int id, @RequestBody Articulo articulo){
-        Articulo actualizarArticulo = repositoryArticulo.findById(id).orElse(null);
-        if (actualizarArticulo != null) {
-            actualizarArticulo.setNombre(articulo.getNombre());
-            actualizarArticulo.setDescripcion(articulo.getDescripcion());
-            actualizarArticulo.setStock(articulo.getStock());
-            actualizarArticulo.setPrecio(articulo.getPrecio());
-            actualizarArticulo.setDisponible(articulo.getDisponible());
-            actualizarArticulo.setImagenes(articulo.getImagenes());
-            repositoryArticulo.save(actualizarArticulo);
-            return "Articulo Editado Correctamente";
-        } else {
-            return "Articulo no encontrado";
-        }
+    // Editar Articulo
+    @PutMapping("editarArticulo/{id}")
+    public String uptdate(@PathVariable Integer id, @RequestBody Articulo articulo) {
+        Articulo uptdateArticulo = repositoryArticulo.findById(id).get();
+        uptdateArticulo.setNombre(articulo.getNombre());
+        uptdateArticulo.setPrecio(articulo.getPrecio());
+        uptdateArticulo.setStock(articulo.getStock());
+        uptdateArticulo.setDisponible(articulo.getDisponible());
+        uptdateArticulo.setDescripcion(articulo.getDescripcion());
+        uptdateArticulo.setImagenes(articulo.getImagenes());
+        repositoryArticulo.save(uptdateArticulo);
+
+        return "ARTICULO EDITADO CORRECTAMENTE";
     }
 
-    @DeleteMapping("delete/{id}")
-        public String eliminarArticulo(@PathVariable int id){
-        Articulo editarArticulo=repositoryArticulo.findById(id).get();
-        repositoryArticulo.delete(editarArticulo);
-        return "Articulo Eliminado Correctamente";
+    // Eliminar Articulo
+    @DeleteMapping("deleteArticulo/{id}")
+    public String delete(@PathVariable Integer id) {
+        Articulo deleteArticulo = repositoryArticulo.findById(id).get();
+        repositoryArticulo.delete(deleteArticulo);
+
+        return "ARTICULO ELIMINADO";
     }
 
 }
