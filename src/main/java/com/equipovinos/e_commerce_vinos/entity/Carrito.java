@@ -15,6 +15,7 @@ import lombok.AllArgsConstructor;
 public class Carrito implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
     @Basic
@@ -24,8 +25,7 @@ public class Carrito implements Serializable {
     private Date fecha;
 
     //Relaciones
-    @OneToOne//(cascade = CascadeType.ALL)    //CORREGIDO
-    @JoinColumn(name = "usuario_id")
+    @OneToOne
     private Usuario usuario;
 
 

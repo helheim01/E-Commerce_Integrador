@@ -14,6 +14,7 @@ import lombok.Setter;
 public class Domicilio implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
     @Basic

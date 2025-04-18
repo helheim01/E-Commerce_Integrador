@@ -16,6 +16,7 @@ import lombok.Setter;
 public class DetalleCarrito implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
     @Basic
@@ -25,13 +26,13 @@ public class DetalleCarrito implements Serializable {
 
     //Relaciones
 
-    @OneToOne(cascade = CascadeType.ALL)    //CORREGIDO
-    @JoinColumn(name = "carrito_id")
+    @OneToOne//(cascade = CascadeType.ALL)    //CORREGIDO
+    //@JoinColumn(name = "carrito_id")
     private Carrito carrito;
 
 
-    @OneToMany(cascade = CascadeType.ALL)  //CORREGIDO
-    @JoinColumn(name = "detalleCarrito_id")
+    @OneToMany//(cascade = CascadeType.ALL)  //CORREGIDO
+    //@JoinColumn(name = "detalleCarrito_id")
     private List<Articulo> articulos = new ArrayList<>();
 
     public void addArticulo(Articulo articulo) {

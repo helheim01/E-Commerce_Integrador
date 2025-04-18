@@ -13,6 +13,7 @@ import lombok.Setter;
 public class Articulo implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
     @Basic

@@ -18,6 +18,7 @@ public class Venta implements Serializable {
 
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
 
@@ -29,15 +30,15 @@ public class Venta implements Serializable {
     private MedioPago medioPago;
 
     @OneToOne//(cascade = CascadeType.ALL) //CORREGIDO
-    @JoinColumn(name = "usuario_id")
+    //@JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
     @OneToOne//(cascade = CascadeType.ALL) //CORREGIDO
-    @JoinColumn(name = "carrito_id")
+    //@JoinColumn(name = "carrito_id")
     private Carrito carrito;
 
     @OneToOne//(cascade = CascadeType.ALL) //CORREGIDO
-    @JoinColumn(name = "envio_id")
+    //@JoinColumn(name = "envio_id")
     private Envio envio;
 
 

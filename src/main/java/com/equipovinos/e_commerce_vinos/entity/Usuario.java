@@ -15,6 +15,7 @@ import lombok.AllArgsConstructor;
 @Entity
 public class Usuario implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
 
@@ -26,15 +27,10 @@ public class Usuario implements Serializable {
     private int edad;
     private String contrasenia;
 
-
-    @Enumerated(EnumType.STRING)
-    private TipoUsuario tipoUsuario;
-
-
     //Relaciones
 
-    @OneToMany(cascade = CascadeType.ALL)  //CORREGIDO
-    @JoinColumn(name = "usuario_id")
+    @OneToMany//(cascade = CascadeType.ALL)  //CORREGIDO
+    //@JoinColumn(name = "usuario_id")
     private List<Domicilio> domicilios = new ArrayList<>();
 
 

@@ -15,6 +15,7 @@ import lombok.Setter;
 public class Envio implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     @Enumerated(EnumType.STRING)
     private EstadoEnvio estado;
@@ -27,7 +28,7 @@ public class Envio implements Serializable {
     //Relaciones
 
     @OneToOne//(cascade = CascadeType.ALL) //CORREGIDO
-    @JoinColumn(name = "domicilio_id")
+    //@JoinColumn(name = "domicilio_id")
     private Domicilio domicilio;
 }
 
