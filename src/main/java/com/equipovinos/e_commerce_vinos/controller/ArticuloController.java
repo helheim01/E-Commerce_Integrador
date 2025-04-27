@@ -10,13 +10,15 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/articulos")
+@CrossOrigin(origins = "http://localhost:8080")  // Ajustar la URL si es necesario
 public class ArticuloController {
 
     @Autowired
     private RepositoryArticulo repositoryArticulo;
 
     // Obtener Articulo por ID
-    @GetMapping("articulo")
+    @GetMapping("articulo/{id}")
     public Articulo getArticulo(@PathVariable Integer id) {
         return repositoryArticulo.findById(id).get();
     }

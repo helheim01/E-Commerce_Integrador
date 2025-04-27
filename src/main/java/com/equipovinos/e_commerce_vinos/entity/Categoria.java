@@ -26,8 +26,8 @@ public class Categoria implements Serializable {
 
     //Relaciones
 
-    @OneToMany//(cascade = CascadeType.ALL)  //CORREGIDO
-    //@JoinColumn(name = "categoria_id")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "categoria_id")
     private List<Articulo> articulos = new ArrayList<>();
 
     public void addArticulo(Articulo articulo) {
