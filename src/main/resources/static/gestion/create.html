@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Artículo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Estilos generales */
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #f5f5f5;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          min-height: 100vh;
+          padding-top: 40px;
+        }
+
+        .container {
+          background-color: #ffffff;
+          padding: 30px 40px;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          max-width: 500px;
+        }
+
+        h2 {
+          text-align: center;
+          color: #333;
+          margin-bottom: 20px;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        label {
+          font-weight: 600;
+          margin-bottom: 5px;
+          color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"],
+        select,
+        textarea {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 1rem;
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        textarea {
+          resize: vertical;
+        }
+
+        .form-checkbox {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .btnRegistrar {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px;
+          border: none;
+          border-radius: 5px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        .btnRegistrar:hover {
+          background-color: #45a049;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+          .container {
+            padding: 20px;
+          }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Registrar Artículo</h2>
+
+    <form id="formArticulo" enctype="multipart/form-data">
+
+        <label for="nombre">Nombre del Artículo</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Ej: Vino Tinto" required>
+
+        <label for="precio">Precio</label>
+        <input type="number" name="precio" id="precio" step="0.01" placeholder="Ej: 10000" required>
+
+        <label for="descripcion">Descripción</label>
+        <textarea name="descripcion" id="descripcion" rows="4"
+                  placeholder="Ej: El Malbec..." required></textarea>
+
+        <label for="imagenes">Imagen</label>
+        <input type="file" name="imagenes" id="imagenes" accept="image/*" required>
+
+        <label for="stock">Stock disponible</label>
+        <input type="number" name="stock" id="stock" placeholder="Ej: 50" required>
+
+        <div class="form-checkbox">
+            <input type="checkbox" name="disponible" id="disponible">
+            <label for="disponible">¿Disponible para la venta?</label>
+        </div>
+
+        <button type="button" id="btnRegistrar" class="btnRegistrar">
+            Guardar Artículo
+        </button>
+    </form>
+</div>
+
+<script src="../js/guardarArticulo.js"></script>
+</body>
+</html>
