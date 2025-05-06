@@ -10,10 +10,15 @@ form.addEventListener("submit", async (e) => {
     return;
   }
 
-  const confirmacion = confirm(`¿Estás seguro de que querés eliminar el artículo con ID ${id}?`);
-  if (!confirmacion) return;
-
   try {
+    // Verificar existencia del artículo
+    const verificarResp = await fetch(`http://localhost:8080/articulos/articulo/${id}`);
+    if (!verificarResp.ok) throw new Error("No se encontró un artículo con ese ID");
+
+    const confirmacion = confirm(`¿Estás seguro de que querés eliminar el artículo con ID ${id}?`);
+    if (!confirmacion) return;
+
+    // Si existe, proceder con eliminación
     const resp = await fetch(`http://localhost:8080/articulos/deleteArticulo/${id}`, {
       method: "DELETE"
     });
@@ -29,6 +34,6 @@ form.addEventListener("submit", async (e) => {
 
   } catch (err) {
     console.error(err);
-    alert("Error al eliminar el artículo: " + err.message);
+    alert("Error: " + err.message);
   }
 });
