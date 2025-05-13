@@ -1,0 +1,765 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(images/viñedo-2.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #fffdfc;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #fffdfc;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{
+    color: #CE967B;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono {
+    width: 150px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 75px;
+    line-height: 80px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.header-content p{
+    font-size: 16px;
+    color: #c5c5c5;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #CE967B;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
+
+.btn-1:hover{
+    background-color: #51955C;
+}
+
+.vinos{
+    padding: 25px 0;
+    background-color: white;
+    position: relative;
+}
+
+.vinos-content{
+    text-align: center;
+}
+
+.vinos-content h2{
+    font-size: 36px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
+
+.txt-p{
+    font-size: 16px;
+    color: #414247;
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+
+.vinos-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.vinos2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.vinos-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.services {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/barril-2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px 0;
+    margin-bottom: 0;
+}
+
+.services-content {
+    text-align: center;
+}
+
+.services-content h2 {
+    font-size: 36px;
+    line-height: 70px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+}
+
+.services-content p{
+    font-size: 16px;
+    color: #c5c5c5;
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+.services-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.services-1 {
+    padding: 0 100px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+}
+
+.services-1 img {
+    width: 25px;
+    margin-bottom: 15px;
+}
+
+.services-1 h3 {
+    color: #EACCB3;
+    font-size: 18px;
+}
+
+.wine-card {
+    width: 250px;
+    background-color: #dbd7d7;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.wine-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.wine-card h3 {
+    font-size: 20px;
+    color: #323337;
+    margin-bottom: 10px;
+}
+
+.wine-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.wine-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+}
+
+.wine-bottle {
+    transform-style: preserve-3d;
+    animation: float 6s ease-in-out infinite;
+}
+
+.wine-label {
+    transform: translateZ(20px);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #2c0e0e 0%, #1a0a0a 100%);
+}
+
+.vinos-1-content {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(images/fondo-uva-1.png);
+    background-attachment: fixed;
+    /*background-color: #b59a9a;*/
+}
+
+.vinos-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px;
+    justify-content: center;
+}
+
+.vinos1-img {
+    max-width: 300px;
+    flex-shrink: 0;
+}
+
+.vinos1-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+
+.vinos1-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: center;
+    color: #f9f9f9;
+}
+
+.vinos-1-content h2 {
+    font-size: 36px;
+    line-height: 70px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.relative img{
+    width: 350px;
+    margin-bottom: 15px;
+}
+
+.contact {
+    padding: 20px;
+    margin-bottom: 0;
+}
+
+.contact h1 {
+    font-size: 36px;
+    line-height: 70px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #323337;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.contactInfo {
+    flex-shrink: 0;
+}
+
+.contactForm {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0
+}
+
+.box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.icon{
+    min-width: 60px;
+    height: 60px;
+    background: #CE967B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+.icon img {
+    margin-bottom: 0px;
+}
+
+.text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.contactForm {
+    width: 50%;
+    background: #EACCB3;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 400px;
+}
+
+.contactForm h2 {
+    font-size: 20px;
+    line-height: 70px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.inputBox input, textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    background-color: #EACCB3;
+    border: none;
+    border-bottom: 1px solid #1a0a0a;
+    outline: none;
+    resize: none;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #414247;
+}
+
+.inputBox input:focus ~ span, input:valid ~ span, textarea:focus ~ span, textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.inputBox input[type="submit"] {
+    background: #323337;
+    color: #f9f9f9;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+.inputBox input:hover[type="submit"]{
+    background-color: #51955C;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #CE967B;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
+
+.btn-1:hover{
+    background-color: #51955C;
+}
+
+.mapa {
+    width: 400px;
+    height: 300px;
+    border: 0;
+    border-radius: 20px;
+    margin-bottom: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #51955C;
+    color: #f0f0f0;
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    margin: 0;
+    height: 300px;
+}
+
+.footer img {
+    height: 150px;
+    margin-top: 0;
+}
+
+.footer h1 {
+    margin-bottom: 15px;
+    font-size: 35px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+.footer h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.footer p,
+.footer li,
+.footer span {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #cccccc;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+.footer-contact ul li,
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-contact span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.derechos {
+    text-align: center;
+    background-color: #323337;
+    color: #dbd7d7;
+    margin: 0;
+}
+
+.derechos p {
+    margin-bottom: 0;
+}
+
+
+
+@media(max-width: 991px) {
+    .menu-icono {
+        width: 80px;
+    }
+
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 80px;
+        width: 60%;
+        right: 0;
+        background-color: #51955C;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 100px 30px;
+    }
+
+    .header-content p {
+        padding: 0;
+    }
+
+    .services {
+        padding: 30px;
+    }
+
+    .services h2 {
+        font-size: 30px;
+    }
+
+    .vinos {
+        padding: 30px;
+    }
+
+    .vinos-content h2 {
+        font-size: 30px;
+        padding: 0;
+    }
+
+    .txt-p {
+        padding: 0;
+    }
+
+    .vinos-group {
+        flex-direction: column;
+        margin-bottom: 0
+    }
+
+    .vinos-img {
+        display: none;
+    }
+
+    .services-group {
+        flex-direction: column;
+        margin-bottom: 0;
+        align-items: center;
+    }  
+
+    .vinos-1 {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .vinos-1-content h2 {
+        padding: 30px;
+        font-size: 30px;
+    }
+
+    .vinos1-text {
+        max-width: 100%;
+    }
+
+    .contact {
+        padding: 30px;
+        margin: 0;
+    }
+
+    .contact h1 {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .contact h2 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    .contactInfo {
+        max-width: 100%;
+    }
+
+    .contactForm {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .contactInfo {
+        margin-bottom: 25px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .box .text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .contactInfo{
+        width: 100%;
+    }
+
+    .mapa {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .contact h1 {
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .contactForm {
+        width: 100%;
+    }
+
+    .inputBox span {
+        font-size: 12px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+        padding: 30px;
+        height: auto;
+    }
+
+    .footer-column {
+        margin-bottom: 0;
+    }
+
+    .footerLogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .footer img {
+        width: 70%;
+        margin: 0;
+        height: auto;
+    }
+
+    .footer-links, .footer-contact {
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .footer-links ul {
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .footer-links ul li {
+        margin-left: 0;
+    }
+
+    .footer h1 {
+        font-size: 25px;
+    }
+
+    .footer p, .footer li, .footer span {
+        font-size: 12px;
+        color: #cccccc;
+    }
+
+    .derechos {
+        font-size: 12px;
+    }
+
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinos Moro</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "L_WltZSrs_ufA9nNH",
+        });
+    })();
+    </script>
+    <script src="./form.js"></script>
+</head>
+
+<body>
+    <header id="Inicio" class="header">
+        <div class="menu container">
+            <div>
+                <a href="#" class="logo"> <img src="images/logo.png" class="menu-icono"> </a>
+            </div>
+            <input type="checkbox" id="menu">
+            <label for="menu" class="menu-icono">
+                <img src="images/menu.png" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#Inicio">Inicio</a></li>
+                    <li><a href="#Historia">Nuestra Historia</a></li>
+                    <li><a href="#Vinos">Nuestros Vinos</a></li>
+                    <li><a href="#Contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <h1>Vinos Moro</h1>
+            <p class="txt-p">Descubre la esencia de Mendoza en cada botella</p>
+            <p> </p>
+            <a href="#Historia" class="btn-1"> Ver más </a>
+        </div>
+    </header>
+
+    <section id="Historia" class="vinos">
+        <img class="vino-img" src="images/fondo-1.png" alt="">
+        <div class="vinos-content container">
+            <h2>Nuestra Historia</h2>
+
+            <div class="vinos-group">
+                <div class="vinos1">
+                    <p>
+                        La Bodega fue fundada en el año 2005 por <b>Héctor Juan Domínguez</b> y su esposa, <b>Rufina Adelaida Martínez</b>. Luego de jubilarse tras dedicar más de 60 años de su vida al trabajo en distintas bodegas, Héctor decidió iniciar su propio emprendimiento familiar, acompañado por la ayuda y la bendición de Dios, y con el apoyo incondicional de su esposa.
+                    </p>
+                    <p>
+                        El proyecto comenzó de manera humilde, utilizando las uvas de los parrales de la familia. Con el tiempo, y gracias al esfuerzo constante, la fe, y la calidad del producto, el emprendimiento fue creciendo. Esto permitió establecer vínculos con productores locales para incorporar varietales como <b>Merlot</b>, <b>Cabernet Sauvignon</b>, <b>Malbec</b>, <b>Pinot Noir</b>, <b>Torrontés</b>, <b>Syrah</b> y <b>Bonarda</b> ampliando así la oferta de vinos y elevando la calidad de cada cosecha.
+                    </p>
+                    <p>
+                        El nombre <b>"Moro"</b> tiene un origen simbólico y profundo. Durante las invasiones moras a España, los cristianos bautizados se diferenciaban de los moros, quienes no recibían el bautismo y eran considerados <b>herejes</b>. Inspirados en esta historia, adoptamos el término <b>"vino moro"</b> para hacer referencia a un vino auténtico, sin adulteraciones, no "bautizado" con agua —una práctica desafortunadamente común que algunos productores usaban para aumentar el volumen. En nuestra bodega, creemos que el vino debe conservar su pureza original, tal como lo dicta la verdadera tradición bodeguera.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <main id="Vinos" class="services">
+        <div class="services-content container">
+            <h2>Nuestros Vinos</h2>
+            <div class="services-group">
+                <div class="wine-card bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg transition duration-500 ease-in-out hover:shadow-xl">
+                    <div class="h-64 bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <h3>Vinos Tintos</h3>
+                        <img src="images/tinto-1.png" alt="">
+                        <div class="flex justify-between items-center">
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-card bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg transition duration-500 ease-in-out hover:shadow-xl">
+                    <div class="h-64 bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <h3>Vinos Blancos</h3>
+                        <img src="images/blanco-1.png" alt="">
+                        <div class="flex justify-between items-center">
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-card bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg transition duration-500 ease-in-out hover:shadow-xl">
+                    <div class="h-64 bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <h3>Vinos Rosados</h3>
+                        <img src="images/rosado-1.png" alt="">
+                        <div class="flex justify-between items-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="./articulo.html" class="btn-1">Gestión de Stock</a>
+        </div>
+    </main>
+
+    <section class="vinos-1-content">
+        <div>
+            <h2>Reserva Especial 2018</h2>
+            <div class="vinos-1">
+                <div class="vinos1-img">
+                    <img src="images/especial-1.png" alt="">
+                </div>
+                <div class="vinos1-text">
+                    <p>
+                        Este vino es un atributo a Rufina Adelaida Martínez, una mujer cuya calidez y dedicación dejaron una huella imborrable en nuestras vidas. Esposa ejemplar, madre amorosa y abuela inigualable, su amor y esfuerzo fueron el cimiento de nuestra familia y de esta bodega.
+                    </p>
+                    <p>
+                        Gracias a ella, estamos donde estamos, y cada copa de este vino lleva consigo su legado de trabajo, pasión y amor incondicional. La extrañamos con el alma,pero su luz sigue guiándonos cada día.
+                    </p>
+                    <p>
+                        Con cariño, de Pelado, sus hijos y sus nietos, quienes la llevan siempre en su corazón.
+                    </p>
+                    <p>
+                        Brindemos en su honor, porque su espíritu vive en cada racimo, en cada gota y en cada recuerdo que atesoramos con amor.
+                    </p>
+                    <h3>¡SALUD!</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contacto" class="contact">
+        <div>
+            <h1>Contactanos</h2>
+            <div class="contact-content">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="images/address.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Dirección</h2>
+                        </div>
+                    </div>
+                    <div class="mapa">
+                                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.1843020508913!2d-68.35019062459445!3d-34.62478257294669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96790924f2e52171%3A0xfa875f23d4c0b8ee!2sVinos%20Moro!5e0!3m2!1ses-419!2sar!4v1747020006670!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                    <div class="box">
+                        <div class="icon">
+                            <img src="images/phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>Teléfono</h2>
+                            <p>260 462-7156</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="contactForm">
+                    <form>
+                        <h2>Enviar un mensaje</h2>
+                        <div class="inputBox">
+                            <input type="text" name="nombre" id="nombre" required="required">
+                            <span>Nombre Completo</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="email" id="email" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="telefono" id="telefono" required="required">
+                            <span>Teléfono</span>
+                        </div>
+                        <div class="inputBox">
+                            <textarea name="mensaje" id="mensaje" required="required"></textarea>
+                            <span>Escribe un mensaje...</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-column">
+            <div class="footerLogo">
+                <img src="images/logo.png" alt="">
+                <h1>Vinos Moro</h1>
+            </div>
+        </div>
+        <div class="footer-column">
+            <div class="footer-links">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nuestra Historia</a></li>
+                    <li><a href="#">Nuestros Vinos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-column">
+            <div class="footer-contact">
+                <h2>Contacto</h2>
+                <ul>
+                    <li>
+                        <span>Dirección</span>
+                        <p>Necochea 945, San Rafael, Mendoza</p>
+                    </li>
+                    <li>
+                        <span>Teléfono</span>
+                        <p>260 462-7156</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="derechos">
+        <p>
+            &copy; 2025 Vinos Moro - Todos los derechos reservados
+        </p>
+    </div>
+</body>
+</html>
