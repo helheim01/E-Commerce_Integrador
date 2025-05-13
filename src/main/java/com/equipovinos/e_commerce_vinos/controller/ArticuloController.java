@@ -1,13 +1,10 @@
 package com.equipovinos.e_commerce_vinos.controller;
 
 import com.equipovinos.e_commerce_vinos.entity.Articulo;
-import com.equipovinos.e_commerce_vinos.entity.Carrito;
 import com.equipovinos.e_commerce_vinos.repository.RepositoryArticulo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/articulos")

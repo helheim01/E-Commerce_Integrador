@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -15,7 +16,6 @@ public class Articulo implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
-
     @Basic
     private String nombre;
     private int precio;
@@ -23,5 +23,4 @@ public class Articulo implements Serializable {
     private String imagenes;
     private Boolean disponible;
     private int stock;
-
 }
